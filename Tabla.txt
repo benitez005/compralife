@@ -1,0 +1,47 @@
+CREATE DATABASE ALMACE;
+
+CREATE TABLE Usuario(
+
+    Nombreuser varchar(100),
+    Emailuser varchar(100),
+    Passworduser varchar(20),
+    Document int(20),
+    Direction varchar(100),
+    Telephone int(20),
+    Fecha datetime,
+    Uingreso datetime,
+    PRIMARY KEY (Document)
+    
+);
+
+CREATE TABLE Compras(
+    
+    Cantidadp int(3),
+    Valorc int(8),
+    Fechac datetime,
+    DiteccionE varchar(100),
+    Telefono int(20),
+    Document int(20),
+    IDc varchar (10),
+    PRIMARY KEY (IDc),
+    FOREIGN KEY (Document) REFERENCES Usuario(Document)
+    
+    
+);
+
+CREATE TABLE Productos(
+    
+    IDp varchar(10),
+    Valorp int (8),
+    Descrip text,
+    Cantidad int(5),
+    Calificacion int(1),
+    Comentarios text,
+    Color varchar(20),
+    Tamaño varchar(10)
+    
+
+
+);
+    
+ 
